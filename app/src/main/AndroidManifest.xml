@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cbtis226.docit">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:replace="android:label"
+        android:name=".DoCitApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="DoCit"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.DoCit">
+
+        <activity android:name=".ui.SplashActivity"
+            android:theme="@style/Theme.DoCit.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.LoginActivity"/>
+        <activity android:name=".ui.RegistroActivity"/>
+        <activity android:name=".ui.PrincipalActivity"/>
+        <activity android:name=".ui.PerfilUsuarioActivity"/>
+        <activity android:name=".ui.EditarPerfilActivity"/>
+        <activity android:name=".ui.BuscarDoctorActivity"/>
+        <activity android:name=".ui.PerfilDoctorActivity"/>
+        <activity android:name=".ui.CrearCitaActivity"/>
+        <activity android:name=".ui.MisCitasActivity"/>
+        <activity android:name=".ui.FaqActivity"/>
+        <activity android:name=".ui.HistorialActivity"/>
+
+    </application>
+</manifest>

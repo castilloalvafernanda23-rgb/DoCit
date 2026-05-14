@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.cbtis226.docit"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    // pa las imagenes
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    // pa pegarle a las apis del otro equipo
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    // carrusel de imagenes en perfil doctor
+    implementation 'com.github.smarteist:Android-Image-Slider:1.4.0'
+}

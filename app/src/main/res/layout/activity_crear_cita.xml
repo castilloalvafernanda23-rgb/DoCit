@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blancoHueso">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rojoDocit"
+        android:padding="14dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnAtras"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_atras"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agendar cita"
+            android:textColor="@color/blanco"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginStart="14dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView style="@style/textoTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. Selecciona la fecha"
+                android:textSize="17sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnFecha"
+                style="@style/botonBlanco"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_marginTop="8dp"
+                android:text="Tocar para escoger fecha"/>
+
+            <TextView style="@style/textoTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2. Horarios disponibles"
+                android:textSize="17sp"
+                android:layout_marginTop="22dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHorarios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/lblSinHorario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="14dp"
+                android:textColor="@color/gris"
+                android:text="Escoge una fecha para ver los horarios"
+                android:visibility="visible"/>
+
+            <TextView style="@style/textoTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. Motivo de consulta"
+                android:textSize="17sp"
+                android:layout_marginTop="14dp"/>
+
+            <EditText
+                android:id="@+id/txtMotivo"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Cuéntale al doctor que tienes..."
+                android:background="@drawable/edittext_borde"
+                android:padding="14dp"
+                android:gravity="top"
+                android:layout_marginTop="8dp"
+                android:inputType="textMultiLine"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnConfirmar"
+                style="@style/botonRojo"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="22dp"
+                android:text="Confirmar cita"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

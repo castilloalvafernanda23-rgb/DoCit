@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blancoHueso">
+
+    <!-- header rojo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/rojoDocit"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:src="@drawable/logo_docit"
+            android:background="@drawable/circle_white"
+            android:padding="4dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+            <TextView
+                android:id="@+id/lblHola"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hola!"
+                android:textColor="@color/blanco"
+                android:textSize="13sp"/>
+            <TextView
+                android:id="@+id/lblNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:textColor="@color/blanco"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnPerfil"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_persona"
+            android:padding="6dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- buscador -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="@drawable/edittext_borde"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="14dp"
+                android:id="@+id/cajaBuscar">
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_buscar"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Buscar doctor, especialidad..."
+                    android:textColor="@color/gris"
+                    android:layout_marginStart="10dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categorías / Especialidades"
+                style="@style/textoTitulo"
+                android:textSize="18sp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEspecialidades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Próximas citas"
+                style="@style/textoTitulo"
+                android:textSize="18sp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProximas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/lblNoCitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No tienes citas próximas. Agenda una!"
+                android:textColor="@color/gris"
+                android:gravity="center"
+                android:padding="20dp"
+                android:visibility="gone"/>
+
+            <!-- accesos -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardHistorial"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:layout_marginEnd="8dp"
+                    app:cardBackgroundColor="@color/pastelAzul"
+                    app:cardCornerRadius="14dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                            android:src="@drawable/ic_historial"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Historial" android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardFaq"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="8dp"
+                    app:cardBackgroundColor="@color/pastelVerde"
+                    app:cardCornerRadius="14dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                            android:src="@drawable/ic_faq"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="FAQ" android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="30dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

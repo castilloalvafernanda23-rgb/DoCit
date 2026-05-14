@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView style="@style/textoTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crea tu cuenta"
+            android:textColor="@color/rojoDocit"
+            android:layout_marginBottom="20dp"/>
+
+        <ImageView
+            android:id="@+id/imgFotoPerfil"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_persona"
+            android:background="@drawable/circle_gray"
+            android:padding="10dp"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Tocá para subir foto"
+            android:textColor="@color/gris"
+            android:layout_marginBottom="18dp"/>
+
+        <EditText android:id="@+id/eNombre" style="@style/inputDocit" android:hint="Nombre(s)"/>
+        <EditText android:id="@+id/ePaterno" style="@style/inputDocit" android:hint="Apellido paterno"/>
+        <EditText android:id="@+id/eMaterno" style="@style/inputDocit" android:hint="Apellido materno"/>
+        <EditText android:id="@+id/eCorreo" style="@style/inputDocit" android:hint="Correo" android:inputType="textEmailAddress"/>
+        <EditText android:id="@+id/eTel" style="@style/inputDocit" android:hint="Teléfono" android:inputType="phone"/>
+        <EditText android:id="@+id/eCurp" style="@style/inputDocit" android:hint="CURP" android:inputType="textCapCharacters" android:maxLength="18"/>
+        <EditText android:id="@+id/eFechaNac" style="@style/inputDocit" android:hint="Fecha de nacimiento (DD/MM/AAAA)" android:focusable="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText android:id="@+id/eAltura" style="@style/inputDocit"
+                android:layout_weight="1" android:hint="Altura (m)" android:inputType="numberDecimal"/>
+            <View android:layout_width="10dp" android:layout_height="1dp"/>
+            <EditText android:id="@+id/ePeso" style="@style/inputDocit"
+                android:layout_weight="1" android:hint="Peso (kg)" android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <EditText android:id="@+id/eContra" style="@style/inputDocit" android:hint="Contraseña" android:inputType="textPassword"/>
+        <EditText android:id="@+id/eContra2" style="@style/inputDocit" android:hint="Confirmar contraseña" android:inputType="textPassword"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrar"
+            style="@style/botonRojo"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="20dp"
+            android:text="Registrarme"/>
+    </LinearLayout>
+</ScrollView>

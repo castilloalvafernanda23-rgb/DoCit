@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+    <TextView
+        android:id="@+id/tHora"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="@drawable/bg_chip_nosel"/>
+</FrameLayout>

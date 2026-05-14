@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DoCit</string>
+    <string name="lema">Google no tiene tu expediente, nosotros sí</string>
+    <string name="iniciar">Iniciar sesión</string>
+    <string name="registrar">Registrarme</string>
+    <string name="correo">Correo</string>
+    <string name="contra">Contraseña</string>
+    <string name="faq_texto">DoCit es una app para agendar citas médicas de forma pensada, viendo las reseñas de otros usuarios para tomar la mejor desición, aquí te dejamos las dudas más comunes de como usar nuestra aplicación.</string>
+</resources>

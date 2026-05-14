@@ -1,2 +1,2 @@
-# DoCit
-Aplicación de citas médicas
+# PlantillaBase
+Plantilla base aplicaciones android

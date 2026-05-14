@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.DoCit" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/rojoDocit</item>
+        <item name="colorPrimaryVariant">@color/rojoOscuro</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/rojoClarito</item>
+        <item name="colorOnSecondary">@color/blanco</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/rojoOscuro</item>
+        <item name="android:windowBackground">@color/blanco</item>
+    </style>
+
+    <style name="Theme.DoCit.Splash" parent="Theme.DoCit">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+        <item name="android:statusBarColor">@color/rojoDocit</item>
+    </style>
+
+    <style name="botonRojo" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/rojoDocit</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="botonBlanco" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/rojoDocit</item>
+        <item name="android:textColor">@color/rojoDocit</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="textoTitulo">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/negroSuave</item>
+    </style>
+
+    <style name="inputDocit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">54dp</item>
+        <item name="android:background">@drawable/edittext_borde</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+</resources>
